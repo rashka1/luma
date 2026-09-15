@@ -1,0 +1,304 @@
+/* lume styles */
+
+/* fonts */
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/cormorant_garamond.woff2') format('woff2');
+    font-weight: 400 700;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../fonts/jost.woff2') format('woff2');
+    font-weight: 300 700;
+}
+
+/* colors */
+:root {
+    --ink: #26231F;
+    --deep: #2E4A44;
+    --deep-dark: #233935;
+    --accent: #C0684A;
+    --accent-dark: #A5563B;
+    --sand: #F5F1EA;
+    --pale: #EDF2F0;
+    --line: #E7E1D8;
+    --muted: #6F6A62;
+}
+
+
+/* general */
+
+body {
+    background-color: var(--sand);
+    color: var(--ink);
+    font-family: 'Jost', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+}
+
+a {
+    color: var(--deep);
+}
+
+.text-muted-lume {
+    color: var(--muted);
+}
+
+.btn-lume {
+    background-color: var(--deep);
+    color: #ffffff;
+}
+
+.btn-lume:hover {
+    background-color: var(--deep-dark);
+    color: #ffffff;
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-dark);
+    color: #ffffff;
+}
+
+.btn-outline-lume {
+    border-color: var(--deep);
+    color: var(--deep);
+}
+
+.btn-outline-lume:hover {
+    background-color: var(--deep);
+    color: #ffffff;
+}
+
+/* white box for forms */
+.box {
+    background-color: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card {
+    border-color: var(--line);
+}
+
+
+/* sidebar */
+
+.sidebar {
+    background-color: var(--deep);
+    color: #ffffff;
+    padding: 20px 14px;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.sidebar-brand:hover {
+    color: #ffffff;
+}
+
+.sidebar-brand span {
+    color: #e9a98f;
+}
+
+.sidebar-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 6px 0 20px 46px;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+}
+
+.sidebar .nav-link:hover {
+    color: #ffffff;
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.main {
+    padding: 26px 30px;
+}
+
+/* big screen */
+@media (min-width: 768px) {
+    .layout {
+        display: flex;
+    }
+
+    .sidebar {
+        width: 240px;
+        min-height: 100vh;
+        flex-shrink: 0;
+    }
+
+    .main {
+        flex-grow: 1;
+        min-width: 0; /* so a wide table does not push the page */
+    }
+}
+
+
+/* dashboard cards */
+
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--deep);
+    border-radius: 10px;
+    padding: 16px 18px;
+}
+
+.stat-card.stat-accent {
+    border-left-color: var(--accent);
+}
+
+.stat-label {
+    color: var(--muted);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.big-number {
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--deep);
+}
+
+
+/* tables */
+
+.table-wrap {
+    background-color: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.table th {
+    background-color: var(--pale);
+    color: var(--deep);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.table th,
+.table td {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.status-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.status-active,
+.status-attended {
+    background-color: #DCEFE3;
+    color: #22613D;
+}
+
+.status-booked {
+    background-color: #DCE8F7;
+    color: #1F4F8A;
+}
+
+.status-absent {
+    background-color: #F6DEDA;
+    color: #9A3527;
+}
+
+.status-inactive {
+    background-color: #E6E4E1;
+    color: #5D5A55;
+}
+
+.role-admin {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.role-staff {
+    background-color: var(--pale);
+    color: var(--deep);
+}
+
+/* attendance buttons */
+.mark-button {
+    min-width: 96px;
+    min-height: 44px;
+}
+
+
+/* login */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--deep);
+    padding: 20px;
+}
+
+.login-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 36px 32px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-brand {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--deep);
+}
+
+.login-brand span {
+    color: var(--accent);
+}
+
+
+/* phones */
+@media (max-width: 576px) {
+    .main {
+        padding: 18px 14px;
+    }
+}
+
+
+
+/* print */
+@media print {
+    .sidebar,
+    .no-print {
+        display: none;
+    }
+}
